@@ -39,6 +39,29 @@ end
 
 # Write it in the book
 File.open("Hoshruba.html", 'w') { |file| file.write(html) }
+puts "[html] Generated HTML file"
 
 # Convert it to epub
 `pandoc -S -o Hoshruba.epub --epub-metadata=metadata.xml --epub-cover-image=cover.jpg Hoshruba.html`
+puts "[epub] Generated EPUB file"
+
+# Convert epub to a mobi
+`ebook-convert Hoshruba.epub Hoshruba.mobi`
+puts "[mobi] Generated MOBI file"
+
+# Generate PDF as well
+# First, lets make a better css version of the html
+`pandoc Hoshruba.html -s -c style.css  -o Hoshruba_pdf.html`
+puts "[pdf] Generated html for pdf"
+
+# Now we convert the cover to a pdf
+`convert cover.jpg cover.pdf`
+puts "[pdf] Generated cover for pdf"
+
+# Print the pdf_html file to pdf
+`wkhtmltopdf Hoshruba_pdf.html /tmp/Hoshruba.pdf`
+puts "[pdf] Generated PDF without cover"
+
+# Join the cover and pdf together
+`pdftk cover.pdf /tmp/Hoshruba.pdf cat output Hoshruba.pdf`
+puts "[pdf] Generated PDF file"
