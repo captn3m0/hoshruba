@@ -39,3 +39,6 @@ end
 
 # Write it in the book
 File.open("Hoshruba.html", 'w') { |file| file.write(html) }
+
+# Convert it to epub
+`pandoc -S -o Hoshruba.epub --epub-metadata=metadata.xml --epub-cover-image=cover.jpg Hoshruba.html`
