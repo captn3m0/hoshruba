@@ -13,7 +13,15 @@ and run the script on your own machine to generate the copies.
 - Ruby
 - Nokogiri gem installed (`gem install nokogiri`)
 - Unix system with `wget` installed
-- `pandoc` installed and available 
+- `pandoc` installed and available
+- `ebook-convert` (from calibre) available to generate the mobi file
+- `wkhtmltopdf` for converting html to pdf
+- `pdftk` to stitch the final PDF file
+- `imagemagick` to convert jpg to PDF
+
+The final 3 tools can be skipped if you don't care about the PDF generation.
+
+You can also skip calibre if you only want the EPUB file.
 
 # Setup
 
