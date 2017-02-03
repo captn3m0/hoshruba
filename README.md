@@ -1,5 +1,9 @@
 # hoshruba
 
+
+![](cover.jpg)
+
+
 Tor.com recently published the entire first book in the Hoshruba series as a [series
 of blog posts](http://www.tor.com/features/series/hoshruba-series/). This script
 downloads all of these posts and converts them into a publishable format, including
