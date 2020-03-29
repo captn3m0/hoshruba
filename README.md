@@ -38,3 +38,7 @@ All the generated files will be saved with the filename `Hoshruba.{epub|pdf|mobi
 # LICENSE
 
 This is licensed under WTFPL. See COPYING file for the full text.
+
+## Extra
+
+A list of my other EBook generation projects: https://captnemo.in/ebooks/, includes a link to other related projects as well
