@@ -1,8 +1,6 @@
 # hoshruba
 
-
 ![](cover.jpg)
-
 
 Tor.com recently published the entire first book in the Hoshruba series as a [series
 of blog posts](http://www.tor.com/features/series/hoshruba-series/). This script
@@ -31,7 +29,8 @@ You can also skip calibre if you only want the EPUB file.
 
 After downloading the repo and installing the requirements, just run
 
-    ruby setup.rb
+    bundle install
+    bundle exec ruby setup.rb
 
 All the generated files will be saved with the filename `Hoshruba.{epub|pdf|mobi|html}`
 
